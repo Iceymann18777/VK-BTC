@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">	
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>two param2</title>
+<!-- <link rel="shortcut icon" type="image/ico" href="/images/w4.png"> -->
+<link rel="stylesheet" href="admin_gear.css">
+<script src="global_vk_btc.js"></script>
+</head>
+<body onload="on_body_onload();">
+<main id="maini">
+<nav style="background:brown;">home payment создать проект <span id="med">@</span></nav>
+<section id="main2">
+<form id="formAdmin" data-typ="owner" name="twoparam" method="" action="/me" enctype="">
+<!-- <nav><span class="tabi active" data-typ="owner">Проект</span><span class="tabi" data-typ="partner">Партнер</span></nav> -->
+<!-- <article id="articleOwner" class="tab-contenti active"> -->
+<fieldset name="project"><!-- <legend><b>Описание авторского проекта</b></legend> -->
+<div id="me-status"><span id="ms">статус: </span><span id="mcurr">начало</span></div>
+<span class="span-beschreib"><b>Название проекта</b></span>&nbsp;<span id="maxil">0/50</span><br>
+<input type="text" id="bziel"  name="gesamtziel" placeholder="название проекта" required oninvalid="on_inv(this);" onchange="on_blur_btc(this);"
+ value="Игра  'За 80 дней  вокруг света'" data-typ="prjname" maxlength="50" oninput="on_input(this);"/><div data-typ="prjnameInfo"></div><br>
+
+<span class="span-beschreib"><b>Срок размещения проекта *</b></span><br>
+
+<div class="div-dauern">
+<label class="cntlb">90 дней<input type="radio" checked name="dauern" value="1"/><span class="mark"></span></label>
+<label class= "cntlb">180 дней<input type="radio" name="dauern" value="2"/><span class="mark"></span></label>
+<label class="cntlb">Бессрочно <span class="blago">**</span><input type="radio" name="dauern" value="3"/><span class="mark"></span></label>
+</div><br>
+
+
+<span class="span-beschreib"><b>Бюджет  проекта</b> в <ins>биткоинах</ins> (<abbr><b>BTC</b></abbr>)</span>
+<br> 
+<!-- custom btc input -->
+<span class="span-beschreib">В пределах от </span><span class="span-btc-min">0.0263</span>
+<span class="span-beschreib">до&nbsp;</span><span class="span-btc-max">300</span><span class="span-beschreib"> <b>BTC</b></span>
+
+<label for="dropcheck"><input id="dropcheck" type="checkbox" hidden/>
+<!-- <span class="span-label"><b>Сумма в биткоинах:</b></span> -->
+<div id="wraptable" style="">
+<div id="cursi" style=""></div>
+<div id="placeholdi">0.05 (BTC)</div>
+<table id="tableBtcAmount">
+<tbody style="">
+<td><div></div></td>
+<td><div></div></td>
+<td><div></div></td>
+<td><div></div></td>
+<td><div></div></td>
+<td><div></div></td>
+<td><div></div></td>
+<td><div></div></td>
+</tbody>
+<!-- data-typ = [init, back, ins, reset, extrem]-->
+<tfoot style="display:none;"><td colspan="8">
+<input type="text" id="spanout" name="btc" value="" data-typ="init"/> 
+</td>
+</tfoot> 
+</table>
+<div id="tregDown" class="treg-down"></div>
+</div>
+</label><div data-typ="initInfo"></div>
+
+<section id="dropBtc">
+<!-- position: relative is besser -->
+<section class="keypadInfo"><small id="padinfo">keypad</small></section>
+<div class="btclab">
+<label class="keypad-lbl" data-zif="0">0</label>
+<label class="keypad-lbl" data-zif="1">1</label>
+<label class="keypad-lbl" data-zif="2">2</label>
+<label class="keypad-lbl" data-zif="3">3</label>
+<label class="keypad-lbl" data-zif="4">4</label>
+<label class="keypad-lbl" data-zif="5">5</label>
+<label class="keypad-lbl" data-zif="6">6</label>
+<label class="keypad-lbl" data-zif="7">7</label>
+<label class="keypad-lbl" data-zif="8">8</label>
+<label class="keypad-lbl" data-zif="9">9</label>
+<label class="keypad-lbl" title="point" data-zif=".">.</label>
+<label class="keypadReset" title="reset">сброс<!--clear--></label>
+<label class="keypadBackspace" title="backspace">назад<!-- back--></label>
+</div>
+</section> 
+<!-- end of custom btc input -->
+
+<span class="span-beschreib"><b>Биткоин адрес</b></span><br>
+<span class="span-beschreib">Вы сможете получать средства на реализацию 
+проекта сразу, не дожидаясь срока его окончания, также вы сможете изменять свой BTC адрес в любое время. 
+Берем комиссию в размере 3% от каждого платежа.</span><br>
+<input class="btcadri" type="text" name="yourbtcadr" data-typ="btcadr1" maxlength="34" size="34" spellcheck="false" placeholder="your btc address"
+ value="39cjjxHTu7344mXExKb5SoDzbAoDWBBpCj9" required autocomplete="off" oninvalid="on_inv(this);" onchange="on_blur_btc(this);"/><div class="btcadrchange"><span>сменить</span></div>
+ <div data-typ="btcadr1Info"></div>
+ <div><span class="span-beschreib"><b>Партнерство.</b> Если у Вас нет своей идеи, но Вы точно знаете, у кого она есть,
+ то Вы можете запустить кампанию по сбору средств от имени автора идеи и получать за это комиссионные вознаграждения.
+ </span><br>
+  <label class="cntlb2"><span>Стать партнером</span>
+  <input id="checkPartner" data-typ="partner" type="checkbox" name="partner" value=""/><span class="mark2"></span></label>
+
+ </div>
+ 
+</fieldset>
+<!-- </article> -->
+<!-- <article id="articlePartner" class="tab-contenti"> -->
+ <!-- in partnership with -->
+ 
+ <fieldset name="crowd" disabled><!-- <legend><b>Я партнер и хочу иметь процент!</b></legend> -->
+ <div>
+ <span class="span-beschreib">Биткоин адрес - куд процент отстёгивать-то?</span><br>
+ <input type="text" name="hisbtcadr" class="btcadri" maxlength="34" size="34" spellcheck="false" placeholder="your btc address"
+ value="39cjjxHTu7344mXExKb5SoDzbAoDWBBpCj9" required autocomplete="off" data-typ="btcadr2" oninvalid="on_inv(this);" onchange="on_blur_btc(this);"/><div class="btcadrchange"><span>сменить</span></div>
+ <div data-typ="btcadr2Info"></div></div>
+ <div>
+ <span class="span-beschreib">Дык, а скольк? <span id="prozmeri">(Не больше 45%)</span></span><br>
+ <input id="part" type="number" data-typ="btcprozi" name="yrpr" value="2" min="1" max="45" size="3" placeholder="3 %" required oninvalid="on_inv(this);" onchange="on_blur_btc(this);"/>&nbsp;<b>%</b></label>
+<div data-typ="btcproziInfo"></div> <!-- <meter id="yormet" min="1"  high="19" low="9" value="1" max="100">%</meter> --><!-- <span id="me">me</span> -->
+ </div>
+
+</fieldset>
+
+<!--</article> -->
+<fieldset>
+<!--<span class="for-checki">Я принимаю </span><a href="/lo">условия пользования сервисом</a>
+-->
+<label class="cntlb2"><span>Условия пользования сервисом принимаю</span>
+<input id="bedienCheck" required oninvalid="on_inv(this);" onchange="on_change_bedien(this);" data-typ="bedien" type="checkbox" 
+name="bedien" value=""/><span class="mark2"></span></label><div data-typ="bedienInfo"></div>
+<a class="aftlbl" href="/bed">Условия</a>
+<div><span class="span-beschreib">* после проверки, <span class="blago"><b>**</b> благотворительность</span></span></div>
+<div id="ajxProject"></div>
+<div style="margin-top:2px;margin-bottom:1px;"><input type="reset" name="firstreset" value="Сбросить всё"/>
+<input type="submit" id="submitBtc" value="Запустить проект"/></div>
+</fieldset>
+</form>
+</section>
+</main>
+</body>
+<script>function on_body_onload(){is_transi();}</script>
+<script src="admin_gear.js"></script>
+</html>

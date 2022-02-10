@@ -1,0 +1,22 @@
+{
+  "name": "vk_btc",
+  "description": "vk btc payments",
+  "repository": "https://github.com/Globik/vk_btc",
+  "version": "0.0.0",
+  "keywords": [
+    "koa",
+    "btc",
+    "smart_contract"
+  ],
+  "devDependencies": {},
+  "license": "MIT",
+  "dependencies": {
+    "koa-passport": "^4.1.0",
+    "koa-session": "^5.10.0",
+    "passport-oauth2": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=7.6"
+  },
+  "scripts": {}
+}
